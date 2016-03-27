@@ -1,0 +1,21 @@
+PODS:
+  - DZScene (0.1.0)
+  - FBSnapshotTestCase (2.0.7):
+    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
+  - FBSnapshotTestCase/Core (2.0.7)
+  - FBSnapshotTestCase/SwiftSupport (2.0.7):
+    - FBSnapshotTestCase/Core
+
+DEPENDENCIES:
+  - DZScene (from `../`)
+  - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  DZScene:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DZScene: 879e477ff92567aea4bb5f32093a1042bbf1f2da
+  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
+
+COCOAPODS: 0.39.0
