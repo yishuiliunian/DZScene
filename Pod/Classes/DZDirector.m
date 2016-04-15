@@ -7,8 +7,7 @@
 //
 
 #import "DZDirector.h"
-#import <DZGeometryTools.h>
-#import <EKElement.h>
+#import "EKElement.h"
 @implementation DZDirector
 @synthesize rootScene = _rootScene;
 @synthesize keyWindow = _keyWindow;
