@@ -55,7 +55,6 @@
 
 - (void) changeScene:(EKElement*)scene animated:(BOOL)animated completion:(void(^)())completion
 {
-
     UIViewController* currentVC = (UIViewController*)self.rootScene.uiEventPool;
     UIViewController* nextVC = [scene createResponser];
     [UIView transitionFromView:currentVC.view toView:nextVC.view duration:0.25 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
