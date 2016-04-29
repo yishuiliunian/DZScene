@@ -17,6 +17,7 @@
 - (instancetype) initWithRootScene:(EKElement*)rootScene NS_DESIGNATED_INITIALIZER;
 - (void) makeKeyWindowAndVisible;
 - (void) changeScene:(EKElement*)scene animated:(BOOL)animated completion:(void(^)())completion;
+- (void) changeViewController:(UIViewController*)vc scene:(EKElement*)scene  animated:(BOOL)animated completion:(void(^)())completion;
 @end
 
 
