@@ -35,7 +35,10 @@
     return _rootScene;
 }
 
-
+- (UIViewController*) rootViewController
+{
+    return (UIViewController*)self.rootScene.uiEventPool;
+}
 - (UIWindow*) keyWindow
 {
     if (!_keyWindow) {

@@ -11,6 +11,7 @@
 
 @class EKElement;
 @interface DZDirector : NSObject
+@property (nonatomic, strong, readonly) UIViewController* rootViewController;
 @property (nonatomic, strong, readonly)EKElement * rootScene;
 @property (nonatomic, strong, readonly) UIWindow* keyWindow;
 - (instancetype) init  UNAVAILABLE_ATTRIBUTE;
