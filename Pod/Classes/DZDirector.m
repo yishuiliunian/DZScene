@@ -37,7 +37,7 @@
 
 - (UIViewController*) rootViewController
 {
-    return (UIViewController*)self.rootScene.uiEventPool;
+    return (UIViewController*)self.keyWindow.rootViewController;
 }
 - (UIWindow*) keyWindow
 {
