@@ -27,6 +27,18 @@
     
 }
 
+- (BOOL) firstLanchAfterInstalled
+{
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber* luandch = [defaults objectForKey:@"first-luanched"];
+    if (!luandch) {
+        [defaults setObject:@(YES) forKey:@"first-luanched"];
+        [defaults synchronize];
+        return YES;
+    } else {
+        return NO;
+    }
+}
 - (EKElement*) rootScene
 {
     if (!_rootScene) {
