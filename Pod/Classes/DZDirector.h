@@ -20,6 +20,8 @@
 - (void) makeKeyWindowAndVisible;
 - (void) changeScene:(EKElement*)scene animated:(BOOL)animated completion:(void(^)())completion;
 - (void) changeViewController:(UIViewController*)vc scene:(EKElement*)scene  animated:(BOOL)animated completion:(void(^)())completion;
+//
+- (void) willUpdateFromVersion:(NSString*)version toVersion:(NSString*)toversion;
 @end
 
 

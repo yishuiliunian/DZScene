@@ -18,6 +18,7 @@
     if (!self) {
         return self;
     }
+    [self checkUpdatedVersion];
     _rootScene = rootScene;
     return self;
 }
@@ -27,6 +28,25 @@
     
 }
 
+- (void) checkUpdatedVersion
+{
+    NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
+    NSString* version = [defaults stringForKey:@"app-version-main"];
+    NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];
+     NSString *app_Version = [infoDictionary objectForKey:@"CFBundleShortVersionString"];
+    if (![version isEqualToString:app_Version]) {
+        [self  willUpdateFromVersion:version toVersion:app_Version];
+        [defaults setObject:app_Version forKey:@"app-version-main"];
+        [defaults synchronize];
+    }
+
+}
+
+
+- (void) willUpdateFromVersion:(NSString*)version toVersion:(NSString*)toversion
+{
+    
+}
 - (BOOL) firstLanchAfterInstalled
 {
     NSUserDefaults* defaults = [NSUserDefaults standardUserDefaults];
