@@ -20,6 +20,7 @@
     }
     [self checkUpdatedVersion];
     _rootScene = rootScene;
+
     return self;
 }
 
@@ -96,6 +97,8 @@
         _rootScene = scene;
         _keyWindow.rootViewController = nextVC;
     }];
+    
+ 
 }
 
 - (void) changeViewController:(UIViewController*)vc scene:(EKElement*)scene  animated:(BOOL)animated completion:(void(^)())completion
